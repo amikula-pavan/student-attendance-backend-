@@ -1,6 +1,4 @@
 const jwt = require('jsonwebtoken');
-const express = require('express');
-const router = express.Router();
 
 function auth(req, res, next) {
   const authHeader = req.headers.authorization;
@@ -17,8 +15,4 @@ function auth(req, res, next) {
   }
 }
 
-router.get('/', (req, res) => {
-  res.send('Auth route working!');
-});
-
-module.exports = router; 
+module.exports = auth; 
